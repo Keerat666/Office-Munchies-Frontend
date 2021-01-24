@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
         console.log("DP")
         const uploadData = new FormData();
         uploadData.append('image', this.selectedFile, this.selectedFile.name);
-        this.http.post('http://localhost:8000/api/v1/users/upload_photo', uploadData)
+        this.http.post('https://office-munchies-backend.herokuapp.com/api/v1/users/upload_photo', uploadData)
           .subscribe(data => {
             console.log(data["url"])
             this.dp=data["url"]
@@ -49,7 +49,7 @@ export class SignupComponent implements OnInit {
         console.log("ID")
         const uploadData = new FormData();
         uploadData.append('image', this.selectedFile, this.selectedFile.name);
-        this.http.post('http://localhost:8000/api/v1/users/upload_photo', uploadData)
+        this.http.post('https://office-munchies-backend.herokuapp.com/api/v1/users/upload_photo', uploadData)
           .subscribe(data => {
             console.log(data["url"])
             this.id=data["url"]

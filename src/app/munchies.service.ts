@@ -7,7 +7,7 @@ import { Router } from  "@angular/router";
   providedIn: 'root'
 })
 export class MunchiesService {
-  base_url="http://localhost:8000/api/v1"
+  base_url="https://office-munchies-backend.herokuapp.com/api/v1"
 
   constructor(private http: HttpClient, public  router:  Router) { }
 

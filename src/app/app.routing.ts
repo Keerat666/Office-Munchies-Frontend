@@ -24,7 +24,7 @@ const routes: Routes =[
     { path: 'success',          component: OrderSuccessComponent },
     { path: 'preview',          component: PreviewComponent },
 
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+    { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
 
 @NgModule({
