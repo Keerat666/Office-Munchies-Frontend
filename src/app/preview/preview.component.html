@@ -1,0 +1,38 @@
+ <app-navbar (onLoginChanged)="doSomething()" ></app-navbar>
+
+ <div class="position-relative">
+    <!-- shape Hero -->
+    <section class="section section-sm section-shaped">
+      <div class="shape shape-style-1 shape-default">
+        <span></span>
+      </div>
+    </section>
+    <!-- 1st Hero Variation -->
+  </div> 
+ 
+ <section class="section section-sm">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="display-3">Review your Details</h2>
+          <p class="lead text-muted">Review your details and get onboarded to order from our platform!</p>
+        </div>
+      </div>
+
+ 
+ <ul class="list-group">
+  <li class="list-group-item">Name : {{name}}</li>
+  <li class="list-group-item">Phone number : {{phone_number}} </li>
+  <li class="list-group-item">Email : {{email}} </li>
+  <li class="list-group-item">Gender : {{gender}} </li>
+  <li class="list-group-item">Organization Name : {{organization_name}} </li>
+  <li class="list-group-item">Employee Number : {{employee_no}} </li>
+
+</ul> 
+
+<br>
+<small> ID : </small>
+<img [src]="id"  style="height : 200px ; margin-left : 30px"/>
+<br>
+<br>
+ <button class="btn btn-1 btn-success" type="button" (click)="sign_up()">Sign Up</button>

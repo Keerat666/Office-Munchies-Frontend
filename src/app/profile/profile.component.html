@@ -1,0 +1,73 @@
+<app-navbar (onLoginChanged)="doSomething()" ></app-navbar>
+
+<main class="profile-page">
+
+  <section class="section-profile-cover section-shaped my-0">
+    <!-- Circles background -->
+    <div class="shape shape-style-6 shape-primary alpha-4">
+      <span></span>
+      <span></span>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card card-profile shadow mt--300">
+        <div class="px-4">
+          <div class="row justify-content-center">
+            <div class="col-lg-3 order-lg-2">
+              <div class="card-profile-image">
+                <a href="javascript:void(0)">
+                  <img [src]="profile_picture" class="rounded-circle">
+
+                  <br>
+                </a>
+              </div>
+            </div>
+
+            
+            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+              <div class="card-profile-actions py-4 mt-lg-0">
+               
+              </div>
+            </div>
+            <div class="col-lg-4 order-lg-1">
+              <div class="card-profile-stats d-flex justify-content-center">
+                <div>
+                  <span class="heading">{{member_since | date}}</span>
+                  <span class="description">Member Since</span>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+            <br>
+  <br>
+  
+          <div class="text-center mt-5">
+            <h3>{{name}}
+              
+            </h3>
+            <div><i class="ni location_pin mr-2"></i> Phone Number : {{phone_no}}</div>
+            <div><i class="ni business_briefcase-24 mr-2"></i>Email : {{email}}</div>
+            <div><i class="ni education_hat mr-2"></i>Gender : {{gender}}</div>
+            <div><i class="ni education_hat mr-2"></i>Works at {{organization_name}}</div>
+<br>
+        <button class="btn btn-1 btn-primary" type="button" (click)="openID()">ID Card</button>
+<br>
+<br>
+
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

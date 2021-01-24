@@ -1,0 +1,86 @@
+    <app-navbar (onLoginChanged)="doSomething()" ></app-navbar>
+
+  <div class="position-relative">
+    <!-- shape Hero -->
+    <section class="section section-sm section-shaped">
+      <div class="shape shape-style-1 shape-default">
+        <span></span>
+      </div>
+    </section>
+    <!-- 1st Hero Variation -->
+  </div> 
+ 
+ <section class="section section-sm">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="display-3">Review your Order</h2>
+          <p class="lead text-muted">Review your order and hit the order button to get tasty food on your table!</p>
+        </div>
+      </div>
+
+ 
+ <ul class="list-group">
+ <div *ngFor="let items of order">
+   <li class="list-group-item">{{items.item_name}} X {{items.quantity}} = {{items.quantity}}*{{items.item_price}}</li>
+
+ </div>
+
+</ul> 
+
+<br>
+
+ <div class="col-md-4">
+      <small class="d-block text-uppercase font-weight-bold mb-3">Select date</small>
+      <div class="form-group" [ngClass]="{'focused':focus2===true}">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+          </div>
+          <input class="form-control datepicker" placeholder="Select date" name="dp" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus2=true" (blur)="focus2=false" type="text" (select)="onDateSelection($event)" autocomplete="off"/>
+          <br>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+          <small class="d-block text-uppercase font-weight-bold mb-3">Select Time</small>
+
+              <input class="form-control" placeholder="Select time" name="time" [(ngModel)]="time"/>
+
+    </div>
+  <br>
+    <div class="col-md-4">
+        <!-- Radio buttons -->
+        <div class="mb-3">
+          <small class="text-uppercase font-weight-bold">Choose payment method</small>
+        </div>
+        <div class="custom-control custom-radio mb-3">
+          <input (change)= "cash_radio()" name="custom-radio-1" class="custom-control-input" id="customRadio1" type="radio">
+          <label class="custom-control-label" for="customRadio1">
+            <span>Cash</span>
+          </label>
+        </div>
+        <div class="custom-control custom-radio mb-3">
+          <input (change)= "card_radio()" name="custom-radio-1" class="custom-control-input" id="customRadio2" checked type="radio">
+          <label class="custom-control-label" for="customRadio2">
+            <span>Card</span>
+          </label>
+        </div>
+    </div>
+<h3 class="text">Total = {{total}} </h3>
+                 <button class="btn btn-1 btn-success align-center" type="button" (click)="checkout()">Place Order</button>
+
+
+    </div>
+
+    <br>
+
+
+
+
+
+
+  </section>
+  
+  
